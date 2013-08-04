@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A27B7A117AF097600D7C98B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A27B7A017AF097600D7C98B /* UIKit.framework */; };
+		7A27B7A317AF097600D7C98B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A27B7A217AF097600D7C98B /* Foundation.framework */; };
+		7A27B7A517AF097600D7C98B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A27B7A417AF097600D7C98B /* CoreGraphics.framework */; };
+		7A27B7AB17AF097600D7C98B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A27B7A917AF097600D7C98B /* InfoPlist.strings */; };
+		7A27B7AD17AF097600D7C98B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27B7AC17AF097600D7C98B /* main.m */; };
+		7A27B7B117AF097600D7C98B /* MELSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27B7B017AF097600D7C98B /* MELSAppDelegate.m */; };
+		7A27B7B317AF097600D7C98B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A27B7B217AF097600D7C98B /* Default.png */; };
+		7A27B7B517AF097600D7C98B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A27B7B417AF097600D7C98B /* Default@2x.png */; };
+		7A27B7B717AF097600D7C98B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A27B7B617AF097600D7C98B /* Default-568h@2x.png */; };
+		7A27B7BA17AF097600D7C98B /* MELSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27B7B917AF097600D7C98B /* MELSViewController.m */; };
+		7A27B7BD17AF097600D7C98B /* MELSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A27B7BB17AF097600D7C98B /* MELSViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7A27B79D17AF097600D7C98B /* MELSorting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MELSorting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A27B7A017AF097600D7C98B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7A27B7A217AF097600D7C98B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7A27B7A417AF097600D7C98B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7A27B7A817AF097600D7C98B /* MELSorting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MELSorting-Info.plist"; sourceTree = "<group>"; };
+		7A27B7AA17AF097600D7C98B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7A27B7AC17AF097600D7C98B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7A27B7AE17AF097600D7C98B /* MELSorting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MELSorting-Prefix.pch"; sourceTree = "<group>"; };
+		7A27B7AF17AF097600D7C98B /* MELSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MELSAppDelegate.h; sourceTree = "<group>"; };
+		7A27B7B017AF097600D7C98B /* MELSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MELSAppDelegate.m; sourceTree = "<group>"; };
+		7A27B7B217AF097600D7C98B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7A27B7B417AF097600D7C98B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7A27B7B617AF097600D7C98B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7A27B7B817AF097600D7C98B /* MELSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MELSViewController.h; sourceTree = "<group>"; };
+		7A27B7B917AF097600D7C98B /* MELSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MELSViewController.m; sourceTree = "<group>"; };
+		7A27B7BC17AF097600D7C98B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MELSViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A27B79A17AF097600D7C98B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A27B7A117AF097600D7C98B /* UIKit.framework in Frameworks */,
+				7A27B7A317AF097600D7C98B /* Foundation.framework in Frameworks */,
+				7A27B7A517AF097600D7C98B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A27B79417AF097600D7C98B = {
+			isa = PBXGroup;
+			children = (
+				7A27B7A617AF097600D7C98B /* MELSorting */,
+				7A27B79F17AF097600D7C98B /* Frameworks */,
+				7A27B79E17AF097600D7C98B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A27B79E17AF097600D7C98B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A27B79D17AF097600D7C98B /* MELSorting.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A27B79F17AF097600D7C98B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A27B7A017AF097600D7C98B /* UIKit.framework */,
+				7A27B7A217AF097600D7C98B /* Foundation.framework */,
+				7A27B7A417AF097600D7C98B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A27B7A617AF097600D7C98B /* MELSorting */ = {
+			isa = PBXGroup;
+			children = (
+				7A27B7AF17AF097600D7C98B /* MELSAppDelegate.h */,
+				7A27B7B017AF097600D7C98B /* MELSAppDelegate.m */,
+				7A27B7B817AF097600D7C98B /* MELSViewController.h */,
+				7A27B7B917AF097600D7C98B /* MELSViewController.m */,
+				7A27B7BB17AF097600D7C98B /* MELSViewController.xib */,
+				7A27B7A717AF097600D7C98B /* Supporting Files */,
+			);
+			path = MELSorting;
+			sourceTree = "<group>";
+		};
+		7A27B7A717AF097600D7C98B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A27B7A817AF097600D7C98B /* MELSorting-Info.plist */,
+				7A27B7A917AF097600D7C98B /* InfoPlist.strings */,
+				7A27B7AC17AF097600D7C98B /* main.m */,
+				7A27B7AE17AF097600D7C98B /* MELSorting-Prefix.pch */,
+				7A27B7B217AF097600D7C98B /* Default.png */,
+				7A27B7B417AF097600D7C98B /* Default@2x.png */,
+				7A27B7B617AF097600D7C98B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A27B79C17AF097600D7C98B /* MELSorting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A27B7C017AF097600D7C98B /* Build configuration list for PBXNativeTarget "MELSorting" */;
+			buildPhases = (
+				7A27B79917AF097600D7C98B /* Sources */,
+				7A27B79A17AF097600D7C98B /* Frameworks */,
+				7A27B79B17AF097600D7C98B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MELSorting;
+			productName = MELSorting;
+			productReference = 7A27B79D17AF097600D7C98B /* MELSorting.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A27B79517AF097600D7C98B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MELS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = mel;
+			};
+			buildConfigurationList = 7A27B79817AF097600D7C98B /* Build configuration list for PBXProject "MELSorting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7A27B79417AF097600D7C98B;
+			productRefGroup = 7A27B79E17AF097600D7C98B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A27B79C17AF097600D7C98B /* MELSorting */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A27B79B17AF097600D7C98B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A27B7AB17AF097600D7C98B /* InfoPlist.strings in Resources */,
+				7A27B7B317AF097600D7C98B /* Default.png in Resources */,
+				7A27B7B517AF097600D7C98B /* Default@2x.png in Resources */,
+				7A27B7B717AF097600D7C98B /* Default-568h@2x.png in Resources */,
+				7A27B7BD17AF097600D7C98B /* MELSViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A27B79917AF097600D7C98B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A27B7AD17AF097600D7C98B /* main.m in Sources */,
+				7A27B7B117AF097600D7C98B /* MELSAppDelegate.m in Sources */,
+				7A27B7BA17AF097600D7C98B /* MELSViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7A27B7A917AF097600D7C98B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A27B7AA17AF097600D7C98B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7A27B7BB17AF097600D7C98B /* MELSViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A27B7BC17AF097600D7C98B /* en */,
+			);
+			name = MELSViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A27B7BE17AF097600D7C98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7A27B7BF17AF097600D7C98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A27B7C117AF097600D7C98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MELSorting/MELSorting-Prefix.pch";
+				INFOPLIST_FILE = "MELSorting/MELSorting-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7A27B7C217AF097600D7C98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MELSorting/MELSorting-Prefix.pch";
+				INFOPLIST_FILE = "MELSorting/MELSorting-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A27B79817AF097600D7C98B /* Build configuration list for PBXProject "MELSorting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A27B7BE17AF097600D7C98B /* Debug */,
+				7A27B7BF17AF097600D7C98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A27B7C017AF097600D7C98B /* Build configuration list for PBXNativeTarget "MELSorting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A27B7C117AF097600D7C98B /* Debug */,
+				7A27B7C217AF097600D7C98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A27B79517AF097600D7C98B /* Project object */;
+}
