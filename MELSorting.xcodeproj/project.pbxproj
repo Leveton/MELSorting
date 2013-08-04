@@ -18,6 +18,8 @@
 		7A27B7B717AF097600D7C98B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A27B7B617AF097600D7C98B /* Default-568h@2x.png */; };
 		7A27B7BA17AF097600D7C98B /* MELSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27B7B917AF097600D7C98B /* MELSViewController.m */; };
 		7A27B7BD17AF097600D7C98B /* MELSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A27B7BB17AF097600D7C98B /* MELSViewController.xib */; };
+		7A27B7C717AF09B100D7C98B /* DragContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27B7C417AF09B100D7C98B /* DragContext.m */; };
+		7A27B7C817AF09B100D7C98B /* DragDropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27B7C617AF09B100D7C98B /* DragDropManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		7A27B7B817AF097600D7C98B /* MELSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MELSViewController.h; sourceTree = "<group>"; };
 		7A27B7B917AF097600D7C98B /* MELSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MELSViewController.m; sourceTree = "<group>"; };
 		7A27B7BC17AF097600D7C98B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MELSViewController.xib; sourceTree = "<group>"; };
+		7A27B7C317AF09B100D7C98B /* DragContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragContext.h; sourceTree = "<group>"; };
+		7A27B7C417AF09B100D7C98B /* DragContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragContext.m; sourceTree = "<group>"; };
+		7A27B7C517AF09B100D7C98B /* DragDropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropManager.h; sourceTree = "<group>"; };
+		7A27B7C617AF09B100D7C98B /* DragDropManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,10 @@
 				7A27B7B817AF097600D7C98B /* MELSViewController.h */,
 				7A27B7B917AF097600D7C98B /* MELSViewController.m */,
 				7A27B7BB17AF097600D7C98B /* MELSViewController.xib */,
+				7A27B7C317AF09B100D7C98B /* DragContext.h */,
+				7A27B7C417AF09B100D7C98B /* DragContext.m */,
+				7A27B7C517AF09B100D7C98B /* DragDropManager.h */,
+				7A27B7C617AF09B100D7C98B /* DragDropManager.m */,
 				7A27B7A717AF097600D7C98B /* Supporting Files */,
 			);
 			path = MELSorting;
@@ -177,6 +187,8 @@
 				7A27B7AD17AF097600D7C98B /* main.m in Sources */,
 				7A27B7B117AF097600D7C98B /* MELSAppDelegate.m in Sources */,
 				7A27B7BA17AF097600D7C98B /* MELSViewController.m in Sources */,
+				7A27B7C717AF09B100D7C98B /* DragContext.m in Sources */,
+				7A27B7C817AF09B100D7C98B /* DragDropManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

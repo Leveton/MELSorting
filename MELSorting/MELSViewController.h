@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class DragDropManager;
+
 @interface MELSViewController : UIViewController
+{
+    
+}
+
+@property(nonatomic, retain) DragDropManager *dragDropManager;
 
 @end
+
