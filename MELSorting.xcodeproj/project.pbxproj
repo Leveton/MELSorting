@@ -17,7 +17,6 @@
 		7A27B7B517AF097600D7C98B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A27B7B417AF097600D7C98B /* Default@2x.png */; };
 		7A27B7B717AF097600D7C98B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A27B7B617AF097600D7C98B /* Default-568h@2x.png */; };
 		7A27B7BA17AF097600D7C98B /* MELSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27B7B917AF097600D7C98B /* MELSViewController.m */; };
-		7A27B7BD17AF097600D7C98B /* MELSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A27B7BB17AF097600D7C98B /* MELSViewController.xib */; };
 		7A27B7C717AF09B100D7C98B /* DragContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27B7C417AF09B100D7C98B /* DragContext.m */; };
 		7A27B7C817AF09B100D7C98B /* DragDropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27B7C617AF09B100D7C98B /* DragDropManager.m */; };
 /* End PBXBuildFile section */
@@ -38,7 +37,6 @@
 		7A27B7B617AF097600D7C98B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7A27B7B817AF097600D7C98B /* MELSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MELSViewController.h; sourceTree = "<group>"; };
 		7A27B7B917AF097600D7C98B /* MELSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MELSViewController.m; sourceTree = "<group>"; };
-		7A27B7BC17AF097600D7C98B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MELSViewController.xib; sourceTree = "<group>"; };
 		7A27B7C317AF09B100D7C98B /* DragContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragContext.h; sourceTree = "<group>"; };
 		7A27B7C417AF09B100D7C98B /* DragContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragContext.m; sourceTree = "<group>"; };
 		7A27B7C517AF09B100D7C98B /* DragDropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropManager.h; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				7A27B7B017AF097600D7C98B /* MELSAppDelegate.m */,
 				7A27B7B817AF097600D7C98B /* MELSViewController.h */,
 				7A27B7B917AF097600D7C98B /* MELSViewController.m */,
-				7A27B7BB17AF097600D7C98B /* MELSViewController.xib */,
 				7A27B7C317AF09B100D7C98B /* DragContext.h */,
 				7A27B7C417AF09B100D7C98B /* DragContext.m */,
 				7A27B7C517AF09B100D7C98B /* DragDropManager.h */,
@@ -173,7 +170,6 @@
 				7A27B7B317AF097600D7C98B /* Default.png in Resources */,
 				7A27B7B517AF097600D7C98B /* Default@2x.png in Resources */,
 				7A27B7B717AF097600D7C98B /* Default-568h@2x.png in Resources */,
-				7A27B7BD17AF097600D7C98B /* MELSViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,14 +199,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		7A27B7BB17AF097600D7C98B /* MELSViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7A27B7BC17AF097600D7C98B /* en */,
-			);
-			name = MELSViewController.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -226,7 +214,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mike Leveton (FFV4MK482Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mike Leveton (FFV4MK482Q)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -241,6 +230,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "9C2D4D38-F734-4ADC-AD64-836DE5076264";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9C2D4D38-F734-4ADC-AD64-836DE5076264";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -257,7 +248,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mike Leveton (FFV4MK482Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mike Leveton (FFV4MK482Q)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -265,6 +257,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "9C2D4D38-F734-4ADC-AD64-836DE5076264";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9C2D4D38-F734-4ADC-AD64-836DE5076264";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -273,10 +267,14 @@
 		7A27B7C117AF097600D7C98B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mike Leveton (FFV4MK482Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mike Leveton (FFV4MK482Q)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MELSorting/MELSorting-Prefix.pch";
 				INFOPLIST_FILE = "MELSorting/MELSorting-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9C2D4D38-F734-4ADC-AD64-836DE5076264";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9C2D4D38-F734-4ADC-AD64-836DE5076264";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -284,10 +282,14 @@
 		7A27B7C217AF097600D7C98B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mike Leveton (FFV4MK482Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mike Leveton (FFV4MK482Q)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MELSorting/MELSorting-Prefix.pch";
 				INFOPLIST_FILE = "MELSorting/MELSorting-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9C2D4D38-F734-4ADC-AD64-836DE5076264";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9C2D4D38-F734-4ADC-AD64-836DE5076264";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -311,6 +313,7 @@
 				7A27B7C217AF097600D7C98B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
