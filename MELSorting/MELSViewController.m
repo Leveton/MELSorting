@@ -618,7 +618,7 @@
         subViewArray = [[NSArray alloc]initWithObjects:[[viewA subviews] objectAtIndex:0], [[viewB subviews] objectAtIndex:0], [[viewC subviews] objectAtIndex:0], [[viewD subviews] objectAtIndex:0], [[viewE subviews] objectAtIndex:0], [[viewF subviews] objectAtIndex:0], nil];
         
     }
-    if ([pass isEqualToDictionary:dict17]) //2,5
+    if ([pass isEqualToDictionary:dict17])
     {
         
         [draggableView0 setFrame:CGRectMake(0, 0, 300, 86)];

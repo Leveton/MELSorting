@@ -40,7 +40,6 @@
 
 - (void)resetGame:(id)sender
 {
-    NSLog(@"snapto");
 
 }
 
@@ -53,11 +52,10 @@
                 //todo: pointInside seems to answer no even if the point is actually inside the view?
                 CGPoint pointInSubjectsView = [recognizer locationInView:dragSubject];
                 BOOL pointInSideDraggableObject = [dragSubject pointInside:pointInSubjectsView withEvent:nil];
-                //NSLog(@"point%@ %@ subject%@", NSStringFromCGPoint(pointInSubjectsView), pointInSideDraggableObject ? @"inside" : @"outside", NSStringFromCGRect(dragSubject.frame));
                 
                 if (pointInSideDraggableObject)
                 {
-                    NSLog(@"started dragging an object");
+                    
                     self.dragContext = [[DragContext alloc] initWithDraggedView:dragSubject];
 //                    draggableFrame = NSStringFromCGPoint(self.dragContext.draggedView.frame.origin);
                     draggableTag = dragSubject.tag;
@@ -66,7 +64,7 @@
                     [self dragObjectAccordingToGesture:recognizer];
                     
                 } else {
-                    NSLog(@"started drag outside drag subjects");
+                   
                 }
             }
             break;
@@ -84,8 +82,6 @@
                 UIView *viewBeingDragged = self.dragContext.draggedView;
                 //draggableFrame = NSStringFromCGPoint(viewBeingDragged.frame.origin);
                 //draggableFrame = viewBeingDragged.frame.origin;
-                NSLog(@"ended drag event");
-                CGPoint centerOfDraggedView = viewBeingDragged.center;
                 BOOL droppedViewInKnownArea = NO;
                 //   for(int i = 0; i < [self.dropAreas count]; i++) {
                 //     UIView *dropArea = [self.dropAreas objectAtIndex:i];
@@ -105,7 +101,6 @@
                         
                         NSString* draggableTagStr = [NSString stringWithFormat:@"%i", draggableTag];
                         NSString* droppableTagStr = [NSString stringWithFormat:@"%i", dropArea.tag];
-                        NSDictionary *demoDict = [[NSDictionary alloc]initWithObjectsAndKeys:draggableTagStr, droppableTagStr, nil];
                         [[NSNotificationCenter defaultCenter] postNotificationName:@"PrepPostNotificationDemoFlash" object:nil userInfo:nil];
                         
 
@@ -119,14 +114,13 @@
                 
                 if (!droppedViewInKnownArea)
                 {
-                    NSLog(@"release draggable object outside target views - snapping back to last known location");
                     [self.dragContext snapToOriginalPosition];
                 }
                 
                 self.dragContext = nil;
                 
             } else {
-                NSLog(@"Nothing was being dragged");
+                
             }
             break;
         }

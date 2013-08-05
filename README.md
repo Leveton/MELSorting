@@ -3,7 +3,7 @@ MELiPadCalendar
 
 Calendar for the iPad with UITableViews to display daily todos, extends [CKCalendar](https://github.com/jaykz52/CKCalendar)
             
-<img src="https://raw.github.com/Leveton/MELSorting/master/screenshots/screenshot.png" alt="TSNavigationStripView examples" width="680" height="484" />
+<img src="https://raw.github.com/Leveton/MELSorting/master/screenshots/screenshot.png" alt="TSNavigationStripView examples" width="320" height="568" />
 
 ## Requirements
 
