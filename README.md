@@ -1,7 +1,7 @@
-MELiPadCalendar
+MELSorting
 =======
 
-Calendar for the iPad with UITableViews to display daily todos, extends [CKCalendar](https://github.com/jaykz52/CKCalendar)
+Sort UIViews with NSNotificationCenter, UIGestureRecognizer, and a set of dictionaries
             
 <img src="https://raw.github.com/Leveton/MELSorting/master/screenshots/screenshot.png" alt="TSNavigationStripView examples" width="320" height="568" />
 
@@ -9,98 +9,10 @@ Calendar for the iPad with UITableViews to display daily todos, extends [CKCalen
 
 * Xcode 4.5 or higher
 * Apple LLVM compiler
-* EventKit.framework
-* QuartzCore.framework
 
-## Demo
+## About
 
-Build and run the `iPadCalendar` project in Xcode. 
-I've included a JSON file in the demo to simulate an API response.
-
-## Installation
-
-Drop the `MELiPadCalendar` folder into your project.
-Add `QuartzCore.framework` and `EventKit.framework` if you don't already have them in your project.
-
-## Use
-
-Before initiating the calendar, initiate three arrays, one for the dates which will contain data, another for the todo start times and another for the todo end times.
-After that, hit your API and populate the three arrays before initiating the calendar.
-
-```objc
-- (id)init {
-    self = [super init];
-    if (self)
-    {
-        self.theTodoDates = [[NSMutableArray alloc]init];
-        self.theStartHours = [[NSMutableArray alloc]init];
-        self.theEndHours = [[NSMutableArray alloc]init];
-        
-        //hit the API
-        [self getTodoTimeStamps];
-    }
-    return self;
-}
-```
-
-Initiate the calendar.
-
-```objc
-	calendar = [[MELiPadCalendarView alloc] initWithStartDay:startSunday dates:theTodoDates startTimes:theStartHours endTimes:theEndHours frame:CGRectMake(127,54,770,640)];
-
-	calendar.delegate = self;
-
-	orientationDate = [NSDate date];
-
-	//highlight the current date, or a range of dates
-	NSString *stringFromDate = [self.dateFormatter stringFromDate:orientationDate];
-	calendar.selectedDate = [self.dateFormatter dateFromString:stringFromDate];
-	calendar.minimumDate = [self.dateFormatter dateFromString:@""];
-	calendar.maximumDate = [self.dateFormatter dateFromString:@""];
-	calendar.shouldFillCalendar = NO;
-	calendar.adaptHeightToNumberOfWeeksInMonth = YES;
-
-	[self.view addSubview:calendar];
-```
-
-- initWithStartDay can either be startSunday or startMonday and the date range will be Sunday to Saturday or Monday to Sunday respectively.
-
-- dates is an NSMutableArray that stores the dates which have data that needs to be shown.
-
-- startTimes is an NSMutableArray that stores the beginning time for the todo.
-
-- endTimes is an NSMutableArray that stores the end time for the todo.
-
-When a user attempts to move to the previous or next month, the calendar will call `transitionToPreviousMonth` and `transitionToNextMonth` respectively on the delegate (if the delegate implements them).
-In these methods, the entire calendar must be removed and reinitiated in order to accomodate the new data (thanks LLVM!).
-
-``` objc
-- (void)transitionToPreviousMonth
-{
-    [self.calendar removeFromSuperview];
-    
-    self.calendarForOrientation = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents* comps = [[NSDateComponents alloc] init];
-    [comps setMonth:-1];
-    self.orientationDate = [self.calendarForOrientation dateByAddingComponents:comps toDate:self.orientationDate options:0];
-    
-    NSString *stringFromDate = [self.dateFormatter stringFromDate:self.orientationDate];
-    
-   calendar = [[MELiPadCalendarView alloc] initWithStartDay:startSunday dates:theTodoDates startTimes:theStartHours endTimes:theEndHours frame:CGRectMake(127,12,770,580)];
-    
-    calendar.delegate = self;
-    calendar.selectedDate = [self.dateFormatter dateFromString:stringFromDate];
-    calendar.shouldFillCalendar = NO;
-    calendar.adaptHeightToNumberOfWeeksInMonth = YES;
-
-    [self.view addSubview:calendar];
-}
-```
-##Customizing
-
-- Fonts, text colors, and background colors of nearly every element can be customized.
-
-- For more info, please see [CKCalendar](https://github.com/jaykz52/CKCalendar), the project this one is based on.
+See this [tutorial](http://leveton.blogspot.com/2013/08/create-sorting-game-for-ios.html) for an explanation of how I put it together and what I use it for.
 
 ## Contact
 
@@ -109,7 +21,7 @@ In these methods, the entire calendar must be removed and reinitiated in order t
 
 ## License
 
-MELiPadCalendar is available under the MIT license.
+MELSorting is available under the MIT license.
 
 Copyright © 2013 Mike Leveton
 
