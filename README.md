@@ -1,7 +1,7 @@
 MELSorting
 =======
 
-Sort UIViews with NSNotificationCenter, UIGestureRecognizer, and a set of dictionaries
+Sort UIViews with NSNotificationCenter, UIGestureRecognizer, and a set of dictionaries. Useful for games, pickers, settings, and menus.
             
 <img src="https://raw.github.com/Leveton/MELSorting/master/screenshots/screenshot.png" alt="TSNavigationStripView examples" width="320" height="568" />
 
