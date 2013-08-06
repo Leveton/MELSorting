@@ -95,7 +95,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveDropManagerEvent:) name:@"PrepPostNotificationEnfant0Animate" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveDropManagerEvent:) name:@"MELPostNotificationdDemoAnimate" object:nil];
     
     viewA = [[UIView alloc] initWithFrame:CGRectMake(10, 16, 300, 86)];
     [viewA setBackgroundColor:[UIColor clearColor]];

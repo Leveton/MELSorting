@@ -19,8 +19,6 @@
     self = [super init];
     if (self)
     {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetGame:) name:@"PrepPostNotificationResetGame" object:nil];
-        
         _dropAreas = dropAreas;
         _dragSubjects = dragSubjects;
         _dragContext = nil;
@@ -98,17 +96,12 @@
                         [dropArea addSubview:viewBeingDragged];
                         //change origin to match offset on new super view
                         viewBeingDragged.frame = CGRectMake(pointInDropView.x - (viewBeingDragged.frame.size.width / 2), pointInDropView.y - (viewBeingDragged.frame.size.height / 2), viewBeingDragged.frame.size.width, viewBeingDragged.frame.size.height);
-                        
-                        NSString* draggableTagStr = [NSString stringWithFormat:@"%i", draggableTag];
-                        NSString* droppableTagStr = [NSString stringWithFormat:@"%i", dropArea.tag];
-                        [[NSNotificationCenter defaultCenter] postNotificationName:@"PrepPostNotificationDemoFlash" object:nil userInfo:nil];
-                        
 
-                        NSString *string = [NSString stringWithFormat:@"%d", draggableTag];
-                        NSString *string2 = [NSString stringWithFormat:@"%d", dropArea.tag];
+                        NSString *draggable = [NSString stringWithFormat:@"%d", draggableTag];
+                        NSString *droppable = [NSString stringWithFormat:@"%d", dropArea.tag];
                         
-                        NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:string, string2, nil];
-                        [[NSNotificationCenter defaultCenter] postNotificationName:@"PrepPostNotificationEnfant0Animate" object:nil userInfo:userInfo];
+                        NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:draggable, droppable, nil];
+                        [[NSNotificationCenter defaultCenter] postNotificationName:@"MELPostNotificationdDemoAnimate" object:nil userInfo:userInfo];
                     }
                 }
                 
