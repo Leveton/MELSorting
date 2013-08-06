@@ -12,10 +12,10 @@ Sort UIViews with NSNotificationCenter, UIGestureRecognizer, and a set of dictio
 
 ## About
 
-Compile this on an iPhone 5 or iPhone 5 simulator.
-You will need to tweak the frames in MELSViewController.m for this to look good on the iPhone 4.
-
 See this [tutorial](http://leveton.blogspot.com/2013/08/create-sorting-game-for-ios.html) for an explanation of how I put it together and what I use it for.
+
+Compile this on an iPhone 5 or iPhone 5 simulator.
+You will need to tweak the frames in MELSViewController.m for this to look good on an iPhone 4.
 
 ## Contact
 
