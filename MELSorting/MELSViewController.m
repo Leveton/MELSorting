@@ -146,90 +146,6 @@
     draggableView4.tag = 4;
     draggableView5.tag = 5;
     
-    UILabel *one = [[UILabel alloc]initWithFrame:CGRectMake(10, 33, 20, 20)];
-    [one setText:@"1"];
-    [one setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
-    [one setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
-    [one setBackgroundColor:[UIColor clearColor]];
-    [draggableView0 addSubview:one];
-    
-    UILabel *oneb = [[UILabel alloc]initWithFrame:CGRectMake(280, 33, 20, 20)];
-    [oneb setText:@"1"];
-    [oneb setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
-    [oneb setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
-    [oneb setBackgroundColor:[UIColor clearColor]];
-    [draggableView0 addSubview:oneb];
-    
-    UILabel *two = [[UILabel alloc]initWithFrame:CGRectMake(10, 33, 20, 20)];
-    [two setText:@"2"];
-    [two setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
-    [two setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
-    [two setBackgroundColor:[UIColor clearColor]];
-    [draggableView1 addSubview:two];
-    
-    UILabel *twob = [[UILabel alloc]initWithFrame:CGRectMake(280, 33, 20, 20)];
-    [twob setText:@"2"];
-    [twob setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
-    [twob setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
-    [twob setBackgroundColor:[UIColor clearColor]];
-    [draggableView1 addSubview:twob];
-    
-    UILabel *three = [[UILabel alloc]initWithFrame:CGRectMake(10, 33, 20, 20)];
-    [three setText:@"3"];
-    [three setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
-    [three setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
-    [three setBackgroundColor:[UIColor clearColor]];
-    [draggableView2 addSubview:three];
-    
-    UILabel *threeb = [[UILabel alloc]initWithFrame:CGRectMake(280, 33, 20, 20)];
-    [threeb setText:@"3"];
-    [threeb setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
-    [threeb setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
-    [threeb setBackgroundColor:[UIColor clearColor]];
-    [draggableView2 addSubview:threeb];
-    
-    UILabel *four = [[UILabel alloc]initWithFrame:CGRectMake(10, 33, 20, 20)];
-    [four setText:@"4"];
-    [four setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
-    [four setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
-    [four setBackgroundColor:[UIColor clearColor]];
-    [draggableView3 addSubview:four];
-    
-    UILabel *fourb = [[UILabel alloc]initWithFrame:CGRectMake(280, 33, 20, 20)];
-    [fourb setText:@"4"];
-    [fourb setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
-    [fourb setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
-    [fourb setBackgroundColor:[UIColor clearColor]];
-    [draggableView3 addSubview:fourb];
-    
-    UILabel *five = [[UILabel alloc]initWithFrame:CGRectMake(10, 33, 20, 20)];
-    [five setText:@"5"];
-    [five setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
-    [five setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
-    [five setBackgroundColor:[UIColor clearColor]];
-    [draggableView4 addSubview:five];
-    
-    UILabel *fiveb = [[UILabel alloc]initWithFrame:CGRectMake(280, 33, 20, 20)];
-    [fiveb setText:@"5"];
-    [fiveb setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
-    [fiveb setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
-    [fiveb setBackgroundColor:[UIColor clearColor]];
-    [draggableView4 addSubview:fiveb];
-    
-    UILabel *six = [[UILabel alloc]initWithFrame:CGRectMake(10, 33, 20, 20)];
-    [six setText:@"6"];
-    [six setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
-    [six setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
-    [six setBackgroundColor:[UIColor clearColor]];
-    [draggableView5 addSubview:six];
-    
-    UILabel *sixb = [[UILabel alloc]initWithFrame:CGRectMake(280, 33, 20, 20)];
-    [sixb setText:@"6"];
-    [sixb setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
-    [sixb setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
-    [sixb setBackgroundColor:[UIColor clearColor]];
-    [draggableView5 addSubview:sixb];
-    
     [viewA addSubview:draggableView0];
     [viewB addSubview:draggableView1];
     [viewC addSubview:draggableView2];
@@ -245,6 +161,11 @@
     UIPanGestureRecognizer *uiTapGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:dragDropManager action:@selector(dragging:)];
     [[self view] addGestureRecognizer:uiTapGestureRecognizer];
     
+    int draggableViewCount = [draggableSubjects count];
+    
+    for (int i = 0; i < draggableViewCount; i++){
+        [self addLabels:[draggableSubjects objectAtIndex:i]];
+    }
     
     dict0 = [[NSDictionary alloc]initWithObjectsAndKeys:@"0", @"0", nil];
     dict1 = [[NSDictionary alloc]initWithObjectsAndKeys:@"0", @"1", nil];
@@ -299,6 +220,24 @@
 }
 
 #pragma utilities
+
+- (void)addLabels:(UIView *)draggable
+{
+    NSString *subLabelStr = [NSString stringWithFormat:@"%d", ([draggable tag] + 1)];
+    UILabel *sublabelLeft = [[UILabel alloc]initWithFrame:CGRectMake(10, 33, 20, 20)];
+    [sublabelLeft setText:subLabelStr];
+    [sublabelLeft setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
+    [sublabelLeft setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
+    [sublabelLeft setBackgroundColor:[UIColor clearColor]];
+    [draggable addSubview:sublabelLeft];
+    
+    UILabel *sublabelRight = [[UILabel alloc]initWithFrame:CGRectMake(280, 33, 20, 20)];
+    [sublabelRight setText:subLabelStr];
+    [sublabelRight setFont:[UIFont fontWithName:@"Avenir-Medium" size:21.0]];
+    [sublabelRight setTextColor:[UIColor colorWithRed:(245/255.f) green:(245/255.f) blue:(245/255.f) alpha:(255/255.f)]];
+    [sublabelRight setBackgroundColor:[UIColor clearColor]];
+    [draggable addSubview:sublabelRight];
+}
 
 - (void)receiveDropManagerEvent:(NSNotification *)notification
 {
