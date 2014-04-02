@@ -1,7 +1,7 @@
 #import "DragContext.h"
 
-
-@implementation DragContext {
+@implementation DragContext
+{
     
     UIView *_draggedView;
     CGPoint _originalPosition;
@@ -10,7 +10,8 @@
 @synthesize draggedView = _draggedView;
 @synthesize originalView = _originalView;
 
-- (id)initWithDraggedView:(UIView *)draggedView {
+- (id)initWithDraggedView:(UIView *)draggedView
+{
     self = [super init];
     if (self)
     {
@@ -22,7 +23,8 @@
     return self;
 }
 
-- (void)snapToOriginalPosition {
+- (void)snapToOriginalPosition
+{
     [UIView animateWithDuration:0.3 animations:^() {
         CGPoint originalPointInSuperView = [_draggedView.superview convertPoint:_originalPosition fromView:_originalView];
         _draggedView.frame = CGRectMake(originalPointInSuperView.x, originalPointInSuperView.y, _draggedView.frame.size.width, _draggedView.frame.size.height);

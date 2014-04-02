@@ -10,6 +10,12 @@
 #import "DragDropManager.h"
 #import <QuartzCore/QuartzCore.h>
 
+#define IS_PHONE_4 [[UIScreen mainScreen] bounds].size.height == 480
+#define IS_PHONE_5 [[UIScreen mainScreen] bounds].size.height == 568
+#define IPHONE_5_HEIGHT 94
+#define IPHONE_4_HEIGHT 79.33
+#define IPHONE_DIFF 14.67
+
 @implementation MELSViewController
 {
     UIView *viewA;
@@ -26,44 +32,6 @@
     UIView *draggableView5;
     NSArray *subViewArray;
     NSArray *superViewArray;
-    NSDictionary *dict0;
-    NSDictionary *dict1;
-    NSDictionary *dict2;
-    NSDictionary *dict3;
-    NSDictionary *dict4;
-    NSDictionary *dict5;
-    NSDictionary *dict6;
-    NSDictionary *dict7;
-    NSDictionary *dict8;
-    NSDictionary *dict9;
-    NSDictionary *dict10;
-    NSDictionary *dict11;
-    NSDictionary *dict12;
-    NSDictionary *dict13;
-    NSDictionary *dict14;
-    NSDictionary *dict15;
-    NSDictionary *dict16;
-    NSDictionary *dict17;
-    NSDictionary *dict18;
-    NSDictionary *dict19;
-    NSDictionary *dict20;
-    NSDictionary *dict21;
-    NSDictionary *dict22;
-    NSDictionary *dict23;
-    NSDictionary *dict24;
-    NSDictionary *dict25;
-    NSDictionary *dict26;
-    NSDictionary *dict27;
-    NSDictionary *dict28;
-    NSDictionary *dict29;
-    NSDictionary *dict30;
-    NSDictionary *dict31;
-    NSDictionary *dict32;
-    NSDictionary *dict33;
-    NSDictionary *dict34;
-    NSDictionary *dict35;
-    NSDictionary *dict36;
-    
 }
 
 @synthesize dragDropManager;
@@ -96,24 +64,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[UIApplication sharedApplication] setStatusBarHidden:YES
+                                            withAnimation:UIStatusBarAnimationFade];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveDropManagerEvent:) name:@"MELPostNotificationdDemoAnimate" object:nil];
     
-    viewA = [[UIView alloc] initWithFrame:CGRectMake(10, 16, 300, 86)];
+    viewA = [[UIView alloc] initWithFrame:CGRectMake(10, 0, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
     [viewA setBackgroundColor:[UIColor clearColor]];
     viewA.tag = 0;
-    viewB = [[UIView alloc] initWithFrame:CGRectMake(10, 102, 300, 86)];
+    viewB = [[UIView alloc] initWithFrame:CGRectMake(10, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
     [viewB setBackgroundColor:[UIColor clearColor]];
     viewB.tag = 1;
-    viewC = [[UIView alloc] initWithFrame:CGRectMake(10, 188, 300, 86)];
+    viewC = [[UIView alloc] initWithFrame:CGRectMake(10, IS_PHONE_4?IPHONE_4_HEIGHT*2:IPHONE_5_HEIGHT*2, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
     [viewC setBackgroundColor:[UIColor clearColor]];
     viewC.tag = 2;
-    viewD = [[UIView alloc] initWithFrame:CGRectMake(10, 274, 300, 86)];
+    viewD = [[UIView alloc] initWithFrame:CGRectMake(10, IS_PHONE_4?IPHONE_4_HEIGHT*3:IPHONE_5_HEIGHT*3, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
     [viewD setBackgroundColor:[UIColor clearColor]];
     viewD.tag = 3;
-    viewE = [[UIView alloc] initWithFrame:CGRectMake(10, 360, 300, 86)];
+    viewE = [[UIView alloc] initWithFrame:CGRectMake(10, IS_PHONE_4?IPHONE_4_HEIGHT*4:IPHONE_5_HEIGHT*4, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
     [viewE setBackgroundColor:[UIColor clearColor]];
     viewE.tag = 4;
-    viewF = [[UIView alloc] initWithFrame:CGRectMake(10, 446, 300, 86)];
+    viewF = [[UIView alloc] initWithFrame:CGRectMake(10, IS_PHONE_4?IPHONE_4_HEIGHT*5:IPHONE_5_HEIGHT*5, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
     [viewF setBackgroundColor:[UIColor clearColor]];
     viewF.tag = 5;
     
@@ -126,17 +97,17 @@
     
     //add elements to drag and drop
     
-    draggableView0 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 86)];
+    draggableView0 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
     [draggableView0 setBackgroundColor:[UIColor colorWithRed:(77/255.f) green:(77/255.f) blue:(255/255.f) alpha:(255/255.f)]];
-    draggableView1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 86)];
+    draggableView1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
     [draggableView1 setBackgroundColor:[UIColor colorWithRed:(26/255.f) green:(26/255.f) blue:(255/255.f) alpha:(255/255.f)]];
-    draggableView2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 86)];
+    draggableView2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
     [draggableView2 setBackgroundColor:[UIColor colorWithRed:(0/255.f) green:(0/255.f) blue:(230/255.f) alpha:(255/255.f)]];
-    draggableView3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 86)];
+    draggableView3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
     [draggableView3 setBackgroundColor:[UIColor colorWithRed:(0/255.f) green:(0/255.f) blue:(205/255.f) alpha:(255/255.f)]];
-    draggableView4 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 86)];
+    draggableView4 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
     [draggableView4 setBackgroundColor:[UIColor colorWithRed:(0/255.f) green:(0/255.f) blue:(179/255.f) alpha:(255/255.f)]];
-    draggableView5 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 86)];
+    draggableView5 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
     [draggableView5 setBackgroundColor:[UIColor colorWithRed:(0/255.f) green:(0/255.f) blue:(155/255.f) alpha:(255/255.f)]];
     
     draggableView0.tag = 0;
@@ -167,47 +138,15 @@
         [self addLabels:[draggableSubjects objectAtIndex:i]];
     }
     
-    dict0 = [[NSDictionary alloc]initWithObjectsAndKeys:@"0", @"0", nil];
-    dict1 = [[NSDictionary alloc]initWithObjectsAndKeys:@"0", @"1", nil];
-    dict2 = [[NSDictionary alloc]initWithObjectsAndKeys:@"0", @"2", nil];
-    dict3 = [[NSDictionary alloc]initWithObjectsAndKeys:@"0", @"3", nil];
-    dict4 = [[NSDictionary alloc]initWithObjectsAndKeys:@"0", @"4", nil];
-    dict5 = [[NSDictionary alloc]initWithObjectsAndKeys:@"0", @"5", nil];
-    dict6 = [[NSDictionary alloc]initWithObjectsAndKeys:@"1", @"0", nil];
-    dict7 = [[NSDictionary alloc]initWithObjectsAndKeys:@"1", @"1", nil];
-    dict8 = [[NSDictionary alloc]initWithObjectsAndKeys:@"1", @"2", nil];
-    dict9 = [[NSDictionary alloc]initWithObjectsAndKeys:@"1", @"3", nil];
-    dict10 = [[NSDictionary alloc]initWithObjectsAndKeys:@"1", @"4", nil];
-    dict11 = [[NSDictionary alloc]initWithObjectsAndKeys:@"1", @"5", nil];
-    dict12 = [[NSDictionary alloc]initWithObjectsAndKeys:@"2", @"0", nil];
-    dict13 = [[NSDictionary alloc]initWithObjectsAndKeys:@"2", @"1", nil];
-    dict14 = [[NSDictionary alloc]initWithObjectsAndKeys:@"2", @"2", nil];
-    dict15 = [[NSDictionary alloc]initWithObjectsAndKeys:@"2", @"3", nil];
-    dict16 = [[NSDictionary alloc]initWithObjectsAndKeys:@"2", @"4", nil];
-    dict17 = [[NSDictionary alloc]initWithObjectsAndKeys:@"2", @"5", nil];
-    dict18 = [[NSDictionary alloc]initWithObjectsAndKeys:@"3", @"0", nil];
-    dict19 = [[NSDictionary alloc]initWithObjectsAndKeys:@"3", @"1", nil];
-    dict20 = [[NSDictionary alloc]initWithObjectsAndKeys:@"3", @"2", nil];
-    dict21 = [[NSDictionary alloc]initWithObjectsAndKeys:@"3", @"3", nil];
-    dict22 = [[NSDictionary alloc]initWithObjectsAndKeys:@"3", @"4", nil];
-    dict23 = [[NSDictionary alloc]initWithObjectsAndKeys:@"3", @"5", nil];
-    dict24 = [[NSDictionary alloc]initWithObjectsAndKeys:@"4", @"0", nil];
-    dict25 = [[NSDictionary alloc]initWithObjectsAndKeys:@"4", @"1", nil];
-    dict26 = [[NSDictionary alloc]initWithObjectsAndKeys:@"4", @"2", nil];
-    dict27 = [[NSDictionary alloc]initWithObjectsAndKeys:@"4", @"3", nil];
-    dict28 = [[NSDictionary alloc]initWithObjectsAndKeys:@"4", @"4", nil];
-    dict29 = [[NSDictionary alloc]initWithObjectsAndKeys:@"4", @"5", nil];
-    dict30 = [[NSDictionary alloc]initWithObjectsAndKeys:@"5", @"0", nil];
-    dict31 = [[NSDictionary alloc]initWithObjectsAndKeys:@"5", @"1", nil];
-    dict32 = [[NSDictionary alloc]initWithObjectsAndKeys:@"5", @"2", nil];
-    dict33 = [[NSDictionary alloc]initWithObjectsAndKeys:@"5", @"3", nil];
-    dict34 = [[NSDictionary alloc]initWithObjectsAndKeys:@"5", @"4", nil];
-    dict35 = [[NSDictionary alloc]initWithObjectsAndKeys:@"5", @"5", nil];
-    
     subViewArray = [[NSArray alloc]initWithObjects:[[viewA subviews] objectAtIndex:0], [[viewB subviews] objectAtIndex:0], [[viewC subviews] objectAtIndex:0], [[viewD subviews] objectAtIndex:0], [[viewE subviews] objectAtIndex:0], [[viewF subviews] objectAtIndex:0], nil];
     
     superViewArray = [[NSArray alloc]initWithObjects:viewA,viewB,viewC,viewD,viewE,viewF, nil];
     
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 - (void)viewDidUnload {
@@ -242,7 +181,6 @@
 - (void)receiveDropManagerEvent:(NSNotification *)notification
 {
     NSDictionary *pass = [notification userInfo];
-    
     NSArray *dictKeys = [pass allKeys];
     NSArray *dictValues = [pass allValues];
     id dictValue = [dictValues objectAtIndex:0];
@@ -253,12 +191,12 @@
     [UIView beginAnimations:@"tapTransition" context:nil];
     [UIView setAnimationDuration:0.6];
     
-    [draggableView0 setFrame:CGRectMake(0, 0, 300, 86)];
-    [draggableView1 setFrame:CGRectMake(0, 0, 300, 86)];
-    [draggableView2 setFrame:CGRectMake(0, 0, 300, 86)];
-    [draggableView3 setFrame:CGRectMake(0, 0, 300, 86)];
-    [draggableView4 setFrame:CGRectMake(0, 0, 300, 86)];
-    [draggableView5 setFrame:CGRectMake(0, 0, 300, 86)];
+    [draggableView0 setFrame:CGRectMake(0, 0, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
+    [draggableView1 setFrame:CGRectMake(0, 0, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
+    [draggableView2 setFrame:CGRectMake(0, 0, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
+    [draggableView3 setFrame:CGRectMake(0, 0, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
+    [draggableView4 setFrame:CGRectMake(0, 0, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
+    [draggableView5 setFrame:CGRectMake(0, 0, 300, IS_PHONE_4?IPHONE_4_HEIGHT:IPHONE_5_HEIGHT)];
     
     [[superViewArray objectAtIndex:dictValueInt] addSubview:[subViewArray objectAtIndex:dictKeyInt]];
     [[superViewArray objectAtIndex:dictKeyInt] addSubview:[subViewArray objectAtIndex:dictValueInt]];
