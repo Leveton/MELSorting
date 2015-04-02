@@ -10,29 +10,29 @@
 	<string>MELSorting</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>456D268A-31AB-4A3B-A634-A1BEE7591BE8</key>
+		<key>57FE3F4D6722848F411A5979844E86059ED420C0</key>
 		<string>https://github.com/Leveton/MELSorting.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MELSorting.xcodeproj/project.xcworkspace</string>
+	<string>MELSorting.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>456D268A-31AB-4A3B-A634-A1BEE7591BE8</key>
+		<key>57FE3F4D6722848F411A5979844E86059ED420C0</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Leveton/MELSorting.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>456D268A-31AB-4A3B-A634-A1BEE7591BE8</string>
+	<string>57FE3F4D6722848F411A5979844E86059ED420C0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>456D268A-31AB-4A3B-A634-A1BEE7591BE8</string>
+			<string>57FE3F4D6722848F411A5979844E86059ED420C0</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MELSorting</string>
 		</dict>

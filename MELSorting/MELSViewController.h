@@ -6,16 +6,12 @@
 //  Copyright (c) 2013 mel. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
-@class DragDropManager;
+//@class DragDropManager;
 
 @interface MELSViewController : UIViewController
-{
-    
-}
 
-@property(nonatomic, retain) DragDropManager *dragDropManager;
+//@property(nonatomic, strong) DragDropManager *dragDropManager;
 
 @end
 
