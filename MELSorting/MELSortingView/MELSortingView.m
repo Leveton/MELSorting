@@ -102,7 +102,10 @@
 
 - (void)viewWasMovedWithView:(UIView *)view
 {
-
+    if ([self.delegate respondsToSelector:@selector(view:wasMovedWithView:)])
+    {
+        [self.delegate view:self wasMovedWithView:view];
+    }
 }
 
 
@@ -121,6 +124,10 @@
     view.tag = destinationView.tag;
     viewReplaced.tag = draggedViewTag;
     
+    if ([self.delegate respondsToSelector:@selector(view:didAlternateView:withView:)])
+    {
+        [self.delegate view:self didAlternateView:viewReplaced withView:destinationView];
+    }
 }
 
 @end

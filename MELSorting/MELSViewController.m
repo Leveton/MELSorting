@@ -36,6 +36,7 @@
     [super viewDidLoad];
     
     MELSortingView *sortView = [[MELSortingView alloc]initWithFrame:self.view.frame andNumberOfViews:6];
+    sortView.delegate = self;
     [sortView addLabels];
     [self.view addSubview:sortView];
 
@@ -54,5 +55,15 @@
 
 
 #pragma mark - MELSortingViewDelegate
+
+- (void)view:(MELSortingView *)sortingView wasMovedWithView:(UIView *)aView
+{
+    NSLog(@"a view at position %ld was moved", aView.tag);
+}
+
+- (void)view:(MELSortingView *)sortingView didAlternateView:(UIView *)departureView withView:(UIView *)destinationView
+{
+    NSLog(@"a view at position %ld was swapped with a view at position %ld", (long)departureView.tag, (long)destinationView.tag);
+}
 
 @end

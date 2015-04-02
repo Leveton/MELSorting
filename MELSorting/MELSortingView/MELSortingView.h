@@ -24,7 +24,7 @@
 
 @optional
 
-- (void)userDidMoveView:(MELSortingView *)view;
-- (void)view:(MELSortingView *)view didAlternateWithView:(MELSortingView *)destinationView;
+- (void)view:(MELSortingView *)sortingView wasMovedWithView:(UIView *)aView;
+- (void)view:(MELSortingView *)sortingView didAlternateView:(UIView *)departureView withView:(UIView *)destinationView;
 
 @end

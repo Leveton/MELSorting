@@ -6,7 +6,6 @@
 @property (nonatomic, strong) UIView *originalView;
 @property (nonatomic, strong) NSArray *dragSubjects;
 @property (nonatomic, strong) NSArray *dropAreas;
-@property NSInteger draggingTag;
 @property CGRect departureRect;
 @property CGPoint originalPosition;
 
@@ -56,22 +55,24 @@
         {
             for (UIView *dragSubject in self.dragSubjects)
             {
-                //todo: pointInside seems to answer no even if the point is actually inside the view?
                 CGPoint pointInSubjectsView = [recognizer locationInView:dragSubject];
                 BOOL pointInSideDraggableObject = [dragSubject pointInside:pointInSubjectsView withEvent:nil];
                 
                 if (pointInSideDraggableObject)
                 {
                     
-                    //self.dragContext = [[DragContext alloc] initWithDraggedView:dragSubject];
                     self.draggedView = dragSubject;
                     self.originalPosition = self.draggedView.frame.origin;
                     self.departureRect = self.draggedView.frame;
                     self.originalView = self.draggedView.superview;
-                    self.draggingTag = dragSubject.tag;
                     [dragSubject removeFromSuperview];
                     [recognizer.view addSubview:dragSubject];
                     [self dragObjectAccordingToGesture:recognizer];
+                    
+                    if ([self.delegate respondsToSelector:@selector(viewWasMovedWithView:)])
+                    {
+                        [self.delegate viewWasMovedWithView:self.draggedView];
+                    }
                     
                 }
             }
