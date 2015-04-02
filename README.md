@@ -1,7 +1,7 @@
 MELSorting
 =======
 
-Sort UIViews with UIPanGestureRecognizer.  Receive delegate notifications in your viewController.  Useful for games, pickers, settings, and menus.
+Sort UIViews with UIPanGestureRecognizer.  Receive delegate notifications for the positions of moved views and swapped views.  Useful for games, pickers, settings, and menus.
             
 <img src="https://raw.github.com/Leveton/MELSorting/master/screenshots/screenshot.png" alt="TSNavigationStripView examples" width="320" height="568" />
 
@@ -14,14 +14,14 @@ Sort UIViews with UIPanGestureRecognizer.  Receive delegate notifications in you
 
 See this [tutorial](http://leveton.blogspot.com/2013/08/create-sorting-game-for-ios.html) for an explanation of how I put it together and what I use it for.
 
-### add the view to your viewController specifying the frame size and number of sortable views that you need.  You can then add numbered labels.
+Add the view to your viewController specifying the frame size and number of sortable views that you need.  You can then add numbered labels.
 
     MELSortingView *sortView = [[MELSortingView alloc]initWithFrame:self.view.frame andNumberOfViews:6];
     sortView.delegate = self;
     [sortView addLabels];
     [self.view addSubview:sortView];
 
-### receive delegate notifications whenever a view is moved or two views have swapped places.  These methods tell you the positions of the moving views from 0..n.
+Receive delegate notifications whenever a view is moved or two views have swapped places.  These methods tell you the positions of the moving views from 0..n.
 
     - (void)view:(MELSortingView *)sortingView wasMovedWithView:(UIView *)aView
     - (void)view:(MELSortingView *)sortingView didAlternateView:(UIView *)departureView withView:(UIView *)destinationView
