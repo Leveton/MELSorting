@@ -1,4 +1,6 @@
 
+#import <UIKit/UIKit.h>
+
 @protocol PanManagerDelegate;
 
 @interface PanManager : NSObject
