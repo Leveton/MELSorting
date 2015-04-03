@@ -15,6 +15,7 @@
 @implementation PanManager
 
 - (id)initWithDragSubjects:(NSArray *)dragSubjects andDropAreas:(NSArray *)dropAreas {
+    
     self = [super init];
     
     if (self)
@@ -48,7 +49,6 @@
 
 - (void)handlePan:(UIPanGestureRecognizer *)recognizer
 {
-    
     switch (recognizer.state)
     {
         case UIGestureRecognizerStateBegan:

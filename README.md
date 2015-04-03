@@ -14,7 +14,9 @@ Sort UIViews with UIPanGestureRecognizer.  Receive delegate notifications for th
 
 See this [tutorial](http://leveton.blogspot.com/2013/08/create-sorting-game-for-ios.html) for an explanation of how I put it together and what I use it for.
 
-Add the view to your viewController specifying the frame size and number of sortable views that you need.  You can then add numbered labels.
+Drag the 'MELSortingView' folder into your project
+
+Add the object to your view controller specifying the frame size and number of sortable views that you need.  You can then add numbered labels.
 
     MELSortingView *sortView = [[MELSortingView alloc]initWithFrame:self.view.frame andNumberOfViews:6];
     sortView.delegate = self;

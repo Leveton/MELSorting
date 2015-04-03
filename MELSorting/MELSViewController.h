@@ -7,11 +7,8 @@
 //
 
 
-//@class DragDropManager;
-
 @interface MELSViewController : UIViewController
 
-//@property(nonatomic, strong) DragDropManager *dragDropManager;
 
 @end
 

@@ -74,7 +74,6 @@
         CGFloat fontSize = width/16;
         CGFloat height = dragView.frame.size.height;
         CGFloat labelDimension = height*.25;
-        //NSLog(@"labeldim: %f", labelDimension);
         CGFloat padding = width*.03125;
         
         NSString *subLabelStr = [NSString stringWithFormat:@"%ld", ([dragView tag] + 1)];

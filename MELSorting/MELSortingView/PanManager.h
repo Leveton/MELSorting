@@ -1,6 +1,4 @@
 
-//@class MELSortingView;
-
 @protocol PanManagerDelegate;
 
 @interface PanManager : NSObject
