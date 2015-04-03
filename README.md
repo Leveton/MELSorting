@@ -12,7 +12,7 @@ Sort UIViews with UIPanGestureRecognizer.  Receive delegate notifications for th
 
 ## Setup
 
-See this [tutorial](http://leveton.blogspot.com/2013/08/create-sorting-game-for-ios.html) for an explanation of how I put it together and what I use it for.
+See this [tutorial](http://leveton.blogspot.com/2013/08/using-custom-sorting-control-to-demo.html) for an explanation of how I put it together and what I use it for.
 
 Drag the 'MELSortingView' folder into your project.  Make sure 'Copy items if needed' and 'Create groups' is checked.
 
