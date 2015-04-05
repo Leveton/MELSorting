@@ -20,13 +20,16 @@
 
 @implementation MELSortingView
 
-- (instancetype)initWithFrame:(CGRect)frame andNumberOfViews:(NSInteger)views
+- (instancetype)initWithViews:(NSInteger)views withXOffset:(CGFloat)XOffset andYOffset:(CGFloat)YOffset andWidth:(CGFloat)width
 {
     NSAssert(views > 2 && views < 8, NSLocalizedString(@"You must have at least 2 and at most 6 views", nil));
-    NSAssert(frame.size.width >= 100, NSLocalizedString(@"View width must be at least 100", nil));
-    NSAssert(frame.size.height >= 177.5, NSLocalizedString(@"View height must be at least 177.5", nil));
+    NSAssert(width >= 100, NSLocalizedString(@"View width must be at least 100", nil));
     
-    self = [super initWithFrame:frame];
+    CGFloat height = width * 1.775;
+    CGFloat subViewHeight = height/views;
+    CGRect viewFrame = CGRectMake(XOffset, YOffset, width, height);
+    
+    self = [super initWithFrame:viewFrame];
     
     if (self)
     {
@@ -34,19 +37,17 @@
         self.dropAreas = [NSMutableArray array];
         self.dictionary = [NSMutableDictionary dictionary];
         
-        CGFloat width = frame.size.width;
-        CGFloat height = frame.size.height/views;
         
         for (NSInteger i = 0; i < views; i++)
         {
-            UIView *dragView = [[UIView alloc]initWithFrame:CGRectMake(0, i*height, width, height)];
+            UIView *dragView = [[UIView alloc]initWithFrame:CGRectMake(0, i*subViewHeight, width, subViewHeight)];
             dragView.tag = i;
             dragView.userInteractionEnabled = YES;
             [dragView setBackgroundColor:[UIColor colorWithRed:(77-(i*10))/255.f green:(77-(i*10))/255.f blue:(255-(i*20))/255.f alpha:255/255.f]];
             [self addSubview:dragView];
             [self.dragSubjects addObject:dragView];
             
-            UIView *dropView = [[UIView alloc]initWithFrame:CGRectMake(0, i*height, width, height)];
+            UIView *dropView = [[UIView alloc]initWithFrame:CGRectMake(0, i*subViewHeight, width, subViewHeight)];
             dropView.tag = i;
             dropView.userInteractionEnabled = NO;
             [self addSubview:dropView];

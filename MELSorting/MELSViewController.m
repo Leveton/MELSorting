@@ -35,7 +35,7 @@
 {
     [super viewDidLoad];
     
-    MELSortingView *sortView = [[MELSortingView alloc]initWithFrame:self.view.frame andNumberOfViews:6];
+    MELSortingView *sortView = [[MELSortingView alloc]initWithViews:6 withXOffset:0 andYOffset:0 andWidth:self.view.frame.size.width];
     sortView.delegate = self;
     [sortView addLabels];
     [self.view addSubview:sortView];

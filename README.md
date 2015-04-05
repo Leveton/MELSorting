@@ -16,18 +16,21 @@ See this [tutorial](http://leveton.blogspot.com/2013/08/using-custom-sorting-con
 
 Drag the 'MELSortingView' folder into your project.  Make sure 'Copy items if needed' and 'Create groups' is checked.
 
-Add the object to your view controller specifying the frame size and number of sortable views that you need.  You can then add numbered labels.
+Add the object to your view controller specifying the x and y offsets, the width, and the number of sortable views that you need.  You can also add numbered labels.  To stay in tune with Apple's [Human Interface Guidelines,](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/) the view must be at least 100px wide.
 
-    MELSortingView *sortView = [[MELSortingView alloc]initWithFrame:self.view.frame andNumberOfViews:6];
-    sortView.delegate = self;
-    [sortView addLabels];
-    [self.view addSubview:sortView];
+``` objc
+MELSortingView *sortView = [[MELSortingView alloc]initWithViews:6 withXOffset:0 andYOffset:0 andWidth:self.view.frame.size.width];
+sortView.delegate = self;
+[sortView addLabels];
+[self.view addSubview:sortView];
+```
 
 Receive delegate notifications whenever a view is moved or two views have swapped places.  These methods tell you the positions of the moving views from 0..n.
 
-    - (void)view:(MELSortingView *)sortingView wasMovedWithView:(UIView *)aView
-    - (void)view:(MELSortingView *)sortingView didAlternateView:(UIView *)departureView withView:(UIView *)destinationView
-    
+``` objc
+- (void)view:(MELSortingView *)sortingView wasMovedWithView:(UIView *)aView
+- (void)view:(MELSortingView *)sortingView didAlternateView:(UIView *)departureView withView:(UIView *)destinationView
+```    
 
 ## Contact
 

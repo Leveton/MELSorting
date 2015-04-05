@@ -14,7 +14,7 @@
 
 @property (weak, nonatomic) id<MELSortingViewDelegate> delegate;
 
-- (instancetype)initWithFrame:(CGRect)frame andNumberOfViews:(NSInteger)views;
+- (instancetype)initWithViews:(NSInteger)views withXOffset:(CGFloat)XOffset andYOffset:(CGFloat)YOffset andWidth:(CGFloat)width;
 - (void)addLabels;
 
 @end
