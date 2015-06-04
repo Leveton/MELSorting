@@ -20,7 +20,12 @@
 
 @implementation MELSortingView
 
-- (instancetype)initWithViews:(NSInteger)views withXOffset:(CGFloat)XOffset andYOffset:(CGFloat)YOffset andWidth:(CGFloat)width
++ (instancetype)sortingViewWithViews:(NSInteger)views XOffset:(CGFloat)XOffset YOffset:(CGFloat)YOffset andWidth:(CGFloat)width
+{
+    return [[self alloc] initWithViews:views XOffset:XOffset YOffset:YOffset andWidth:width];
+}
+
+- (id)initWithViews:(NSInteger)views XOffset:(CGFloat)XOffset YOffset:(CGFloat)YOffset andWidth:(CGFloat)width
 {
     NSAssert(views > 2 && views < 8, NSLocalizedString(@"You must have at least 2 and at most 6 views", nil));
     NSAssert(width >= 100, NSLocalizedString(@"View width must be at least 100", nil));
@@ -97,6 +102,7 @@
         [dragView addSubview:sublabelRight];
     }
 }
+
 
 #pragma mark - panManagerDelegate
 

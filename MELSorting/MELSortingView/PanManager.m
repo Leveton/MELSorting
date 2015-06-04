@@ -69,6 +69,7 @@
                     [recognizer.view addSubview:dragSubject];
                     [self dragObjectAccordingToGesture:recognizer];
                     
+                    
                     if ([self.delegate respondsToSelector:@selector(viewWasMovedWithView:)])
                     {
                         [self.delegate viewWasMovedWithView:self.draggedView];
