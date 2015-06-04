@@ -19,7 +19,7 @@ Drag the 'MELSortingView' folder into your project.  Make sure 'Copy items if ne
 Add the object to your view controller specifying the x and y offsets, the width, and the number of sortable views that you need.  You can also add numbered labels.  To stay in tune with Apple's [Human Interface Guidelines,](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/) the view must be at least 100px wide.
 
 ``` objc
-MELSortingView *sortView = [[MELSortingView alloc]initWithViews:6 withXOffset:0 andYOffset:0 andWidth:self.view.frame.size.width];
+MELSortingView *sortView = [MELSortingView sortingViewWithViews:6 XOffset:0 YOffset:0 andWidth:self.view.frame.size.width];
 sortView.delegate = self;
 [sortView addLabels];
 [self.view addSubview:sortView];
