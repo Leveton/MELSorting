@@ -11,20 +11,17 @@
 @protocol MELSortingViewDelegate;
 
 @interface MELSortingView : UIView
-
 @property (weak, nonatomic) id<MELSortingViewDelegate> delegate;
+@property (strong, nonatomic, readonly) NSArray<NSString *> *labels;
 
-+ (instancetype)sortingViewWithViews:(NSInteger)views XOffset:(CGFloat)XOffset YOffset:(CGFloat)YOffset andWidth:(CGFloat)width;
-- (id)initWithViews:(NSInteger)views XOffset:(CGFloat)XOffset YOffset:(CGFloat)YOffset andWidth:(CGFloat)width;
-- (void)addLabels;
+- (void)setLabels:(NSArray<NSString *> *)labels;
++ (instancetype)sortingViewWithFrame:(CGRect)frame forView:(UIView *)superView numberOfViews:(NSInteger)numberOfViews;
 
 @end
-
 
 @protocol MELSortingViewDelegate <NSObject>
 
 @optional
-
 - (void)view:(MELSortingView *)sortingView wasMovedWithView:(UIView *)aView;
 - (void)view:(MELSortingView *)sortingView didAlternateView:(UIView *)departureView withView:(UIView *)destinationView;
 

@@ -31,38 +31,32 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     
-    MELSortingView *sortView = [MELSortingView sortingViewWithViews:6 XOffset:0 YOffset:0 andWidth:self.view.frame.size.width];
+    //MELSortingView *sortView = [MELSortingView sortingViewWithViews:6 XOffset:0 YOffset:0 andWidth:self.view.frame.size.width];
+    MELSortingView *sortView = [MELSortingView sortingViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) forView:self.view numberOfViews:6];
     sortView.delegate = self;
-    [sortView addLabels];
+    NSArray *labels = @[@"0", @"1", @"2", @"3", @"4", @"5"];
+    [sortView setLabels:labels];
     [self.view addSubview:sortView];
-
 }
 
-
--(BOOL)prefersStatusBarHidden
-{
+- (BOOL)prefersStatusBarHidden{
     return YES;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    
-    return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
 }
-
 
 #pragma mark - MELSortingViewDelegate
 
-- (void)view:(MELSortingView *)sortingView wasMovedWithView:(UIView *)aView
-{
+- (void)view:(MELSortingView *)sortingView wasMovedWithView:(UIView *)aView{
     NSLog(@"a view at position %ld was moved", aView.tag);
 }
 
-- (void)view:(MELSortingView *)sortingView didAlternateView:(UIView *)departureView withView:(UIView *)destinationView
-{
+- (void)view:(MELSortingView *)sortingView didAlternateView:(UIView *)departureView withView:(UIView *)destinationView{
     NSLog(@"a view at position %ld was swapped with a view at position %ld", (long)departureView.tag, (long)destinationView.tag);
 }
 
