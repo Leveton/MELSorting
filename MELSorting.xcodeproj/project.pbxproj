@@ -19,6 +19,7 @@
 		7A27B7BA17AF097600D7C98B /* MELSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27B7B917AF097600D7C98B /* MELSViewController.m */; };
 		7AFC6E411ACDEE6600B8C10F /* MELSortingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC6E3E1ACDEE6600B8C10F /* MELSortingView.m */; };
 		7AFC6E421ACDEE6600B8C10F /* PanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC6E401ACDEE6600B8C10F /* PanManager.m */; };
+		D1749C4E20AFD78D00FD0F94 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D1749C4D20AFD78D00FD0F94 /* UIView+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		7AFC6E3E1ACDEE6600B8C10F /* MELSortingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MELSortingView.m; path = MELSortingView/MELSortingView.m; sourceTree = "<group>"; };
 		7AFC6E3F1ACDEE6600B8C10F /* PanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PanManager.h; path = MELSortingView/PanManager.h; sourceTree = "<group>"; };
 		7AFC6E401ACDEE6600B8C10F /* PanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PanManager.m; path = MELSortingView/PanManager.m; sourceTree = "<group>"; };
+		D1749C4C20AFD78D00FD0F94 /* UIView+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		D1749C4D20AFD78D00FD0F94 /* UIView+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 			children = (
 				7AFC6E3D1ACDEE6600B8C10F /* MELSortingView.h */,
 				7AFC6E3E1ACDEE6600B8C10F /* MELSortingView.m */,
+				D1749C4C20AFD78D00FD0F94 /* UIView+Additions.h */,
+				D1749C4D20AFD78D00FD0F94 /* UIView+Additions.m */,
 				7AFC6E3F1ACDEE6600B8C10F /* PanManager.h */,
 				7AFC6E401ACDEE6600B8C10F /* PanManager.m */,
 			);
@@ -188,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1749C4E20AFD78D00FD0F94 /* UIView+Additions.m in Sources */,
 				7AFC6E411ACDEE6600B8C10F /* MELSortingView.m in Sources */,
 				7A27B7AD17AF097600D7C98B /* main.m in Sources */,
 				7A27B7B117AF097600D7C98B /* MELSAppDelegate.m in Sources */,

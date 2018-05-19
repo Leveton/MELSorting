@@ -8,12 +8,14 @@
 
 #import "MELSortingView.h"
 #import "PanManager.h"
+#import "UIView+Additions.h"
 
 @interface MELSortingView ()<PanManagerDelegate>
 @property (nonatomic, strong) PanManager *panManager;
 @property (nonatomic, strong) NSMutableArray<UIView *> *dragSubjects;
 @property (nonatomic, strong) NSMutableArray<UIView *> *dropAreas;
 @property (nonatomic, strong) NSMutableDictionary<NSNumber*, UIView*> *dictionary;
+@property (nonatomic, strong) UIView *canvasView;
 @end
 
 @implementation MELSortingView
@@ -41,13 +43,13 @@
             dragView.tag = i;
             dragView.userInteractionEnabled = YES;
             [dragView setBackgroundColor:[UIColor colorWithRed:(77-(i*10))/255.f green:(77-(i*10))/255.f blue:(255-(i*20))/255.f alpha:255/255.f]];
-            [self addSubview:dragView];
+            [[self canvasView] addSubview:dragView];
             [self.dragSubjects addObject:dragView];
             
             UIView *dropView = [[UIView alloc]initWithFrame:dragView.frame];
             dropView.tag = i;
             dropView.userInteractionEnabled = NO;
-            [self addSubview:dropView];
+            [[self canvasView] addSubview:dropView];
             [self.dropAreas addObject:dropView];
             
             [self.dictionary setObject:dragView forKey:[NSNumber numberWithInteger:dropView.tag]];
@@ -63,35 +65,45 @@
     return self;
 }
 
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    
+    CGRect canvasFrame = [[self canvasView] bounds];
+    canvasFrame.size = CGSizeMake(self.bounds.size.width, self.bounds.size.height);
+    [[self canvasView] setFrame:canvasFrame];
+}
+
+#pragma mark - views
+
+- (UIView *)canvasView{
+    if (!_canvasView){
+        _canvasView = [UIView new];
+        [self addSubview:_canvasView];
+    }
+    return _canvasView;
+}
+
+#pragma mark - setters
+
 - (void)setLabels:(NSArray<NSString *> *)labels{
     _labels = labels;
     [self.dragSubjects enumerateObjectsUsingBlock:^(UIView *dragView, NSUInteger idx, BOOL *stop) {
-        CGFloat width = self.frame.size.width;
-        CGFloat fontSize = width/16;
-        CGFloat height = dragView.frame.size.height;
-        CGFloat labelDimension = height*.25;
-        CGFloat padding = width*.03;
-        NSString *subLabelStr = (idx < self.labels.count) ? [self.labels objectAtIndex:idx] : @"";
-        UILabel *sublabelLeft = [[UILabel alloc]initWithFrame:CGRectMake(padding, (height - labelDimension)/2, labelDimension, labelDimension)];
-        [sublabelLeft setText:subLabelStr];
-        [sublabelLeft setTextAlignment:NSTextAlignmentCenter];
-        [sublabelLeft setFont:[UIFont fontWithName:@"Avenir-Medium" size:fontSize]];
-        sublabelLeft.adjustsFontSizeToFitWidth = YES;
-        [sublabelLeft setMinimumScaleFactor:0.05];
-        [sublabelLeft setTextColor:[UIColor whiteColor]];
-        [dragView addSubview:sublabelLeft];
+        CGFloat fontSize = self.frame.size.width/16;
+        NSString *string = (idx < self.labels.count) ? [self.labels objectAtIndex:idx] : @"";
+        UILabel *label = [UILabel new];
+        [label setText:string];
+        [label sizeToFit];
+        CGRect frame = [label frame];
+        frame.origin.x = [dragView centeredFrameForChildFrame:frame].origin.x;
+        frame.origin.y = [dragView centeredFrameForChildFrame:frame].origin.y;
+        [label setFrame:frame];
         
-        UILabel *sublabelRight = [[UILabel alloc]initWithFrame:CGRectMake(width - (labelDimension+padding), (height - labelDimension)/2, labelDimension, labelDimension)];
-        [sublabelRight setText:subLabelStr];
-        [sublabelRight setTextAlignment:NSTextAlignmentCenter];
-        [sublabelRight setFont:[UIFont fontWithName:@"Avenir-Medium" size:fontSize]];
-        sublabelRight.adjustsFontSizeToFitWidth = YES;
-        [sublabelRight setMinimumScaleFactor:0.05];
-        [sublabelRight setTextColor:[UIColor whiteColor]];
-        [dragView addSubview:sublabelRight];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [label setFont:[UIFont fontWithName:@"Avenir-Medium" size:fontSize]];
+        [label setTextColor:[UIColor whiteColor]];
+        [dragView addSubview:label];
     }];
 }
-
 
 #pragma mark - panManagerDelegate
 

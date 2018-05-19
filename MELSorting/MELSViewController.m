@@ -34,7 +34,6 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    //MELSortingView *sortView = [MELSortingView sortingViewWithViews:6 XOffset:0 YOffset:0 andWidth:self.view.frame.size.width];
     MELSortingView *sortView = [MELSortingView sortingViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) forView:self.view numberOfViews:6];
     sortView.delegate = self;
     NSArray *labels = @[@"0", @"1", @"2", @"3", @"4", @"5"];
