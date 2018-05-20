@@ -92,12 +92,12 @@
         NSString *string = (idx < self.labels.count) ? [self.labels objectAtIndex:idx] : @"";
         UILabel *label = [UILabel new];
         [label setText:string];
-        [label sizeToFit];
-        CGRect frame = [label frame];
-        frame.origin.x = [dragView centeredFrameForChildFrame:frame].origin.x;
-        frame.origin.y = [dragView centeredFrameForChildFrame:frame].origin.y;
-        [label setFrame:frame];
         
+        [label sizeToFit];
+        
+        CGRect frame = [label frame];
+        frame.origin = CGPointMake([dragView centeredOriginForChildFrame:frame].x, [dragView centeredOriginForChildFrame:frame].y);
+        [label setFrame:frame];
         [label setTextAlignment:NSTextAlignmentCenter];
         [label setFont:[UIFont fontWithName:@"Avenir-Medium" size:fontSize]];
         [label setTextColor:[UIColor whiteColor]];

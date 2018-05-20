@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (Additions)
-- (CGRect)centeredFrameForChildFrame:(CGRect)frame;
+- (CGPoint)centeredOriginForChildFrame:(CGRect)frame;
 @end

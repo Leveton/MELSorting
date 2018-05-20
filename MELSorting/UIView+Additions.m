@@ -11,10 +11,10 @@
 
 @implementation UIView (Additions)
 
-- (CGRect)centeredFrameForChildFrame:(CGRect)frame{
+- (CGPoint)centeredOriginForChildFrame:(CGRect)frame{
     CGRect bounds = [self bounds];
     CGFloat minX = CGRectGetMidX(bounds) - (CGRectGetWidth(frame)/2);
-    return CGRectMake(minX, ((CGRectGetHeight(bounds)/2) - (CGRectGetHeight(frame)/2)),CGRectGetWidth(frame),CGRectGetHeight(frame));
+    return CGPointMake(minX, (CGRectGetHeight(bounds)/2) - (CGRectGetHeight(frame)/2));
 }
 
 @end

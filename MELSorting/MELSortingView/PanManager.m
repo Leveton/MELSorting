@@ -1,16 +1,13 @@
 #import "PanManager.h"
 
 @interface PanManager ()
-
 @property (nonatomic, strong) UIView *draggedView;
 @property (nonatomic, strong) UIView *originalView;
 @property (nonatomic, strong) NSArray<UIView*> *dragSubjects;
 @property (nonatomic, strong) NSArray<UIView*> *dropAreas;
 @property CGRect departureRect;
 @property CGPoint originalPosition;
-
 @end
-
 
 @implementation PanManager
 
